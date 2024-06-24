@@ -1,0 +1,108 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+  
+.contenedor {
+    margin-bottom: 20px;
+}
+  
+.bordeImagen {
+    border: 1px solid red;
+    border-radius: 8px; 
+    max-width: 100%; 
+}
+  
+.tarjetas-container {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-between; 
+    width: 80%;
+    max-width: 1000px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.tarjeta {
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0; 
+    flex: 1 1 calc(30% - 20px); 
+    max-width: calc(30% - 20px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tarjeta h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+  
+.tarjeta p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.botonCalculador, .botonValidador {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: orange;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.botonCalculador:hover, .botonValidador:hover {
+    background-color: #ff8c00;
+}
+
+.selects-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.selects-container label {
+    margin-right: 10px;
+}
+
+.selects-container select {
+    padding: 8px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+    .tarjeta {
+        flex: 1 1 calc(50% - 20px); 
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .tarjeta {
+        flex: 1 1 calc(100% - 20px); 
+        max-width: calc(100% - 20px);
+    }
+
+    .selects-container {
+        flex-direction: column; 
+    }
+}
